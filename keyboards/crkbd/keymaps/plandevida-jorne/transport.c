@@ -1,4 +1,9 @@
-#include "transport.h"
+#include <string.h>
+#include <stddef.h>
+
+#include "config.h"
+#include "matrix.h"
+#include "quantum.h"
 
 #define ROWS_PER_HAND (MATRIX_ROWS / 2)
 
@@ -87,13 +92,13 @@ bool transport_master(matrix_row_t matrix[]) {
             i2c_buffer->current_wpm = current_wpm;
         }
     }
+#    endif
     uint8_t current_layer = layer_state;
     if (current_layer != i2c_buffer->current_layer) {
         if (i2c_writeReg(SLAVE_I2C_ADDRESS, I2C_WPM_START, (void *)&current_layer, sizeof(current_layer), TIMEOUT) >= 0) {
             i2c_buffer->current_layer = current_layer;
         }
     }
-#    endif
     return true;
 }
 

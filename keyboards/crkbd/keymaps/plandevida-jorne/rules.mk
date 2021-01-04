@@ -3,11 +3,11 @@
 #   change to "no" to disable the options, or define them in the Makefile in
 #   the appropriate keymap folder that will get included automatically
 #
-MOUSEKEY_ENABLE = yes           # Mouse keys(+4700)
-RGBLIGHT_ENABLE = no           # Enable WS2812 RGB underlight.
-SWAP_HANDS_ENABLE = yes         # Enable one-hand typing
 OLED_DRIVER_ENABLE = yes        # Enable the display driver
 
+MOUSEKEY_ENABLE = no           # Mouse keys(+4700)
+RGBLIGHT_ENABLE = no           # Enable WS2812 RGB underlight.
+SWAP_HANDS_ENABLE = no         # Enable one-hand typing
 NKRO_ENABLE = no               # Enable send more than 6 keys at once
 
 ## Disabled build options
@@ -35,7 +35,7 @@ BOOTLOADER = caterina
 # If you want to change the display of OLED, you need to change here
 SRC +=  ./keymaps/plandevida-jorne/keylogger.c \
         ./keymaps/plandevida-jorne/layer_state_reader.c \
-        ./keymaps/plandevida-jorne/logo_reader.c
+        # ./keymaps/plandevida-jorne/logo_reader.c
 
 QUANTUM_LIB_SRC += ./keymaps/plandevida-jorne/transport.c \
 				   ./drivers/avr/serial.c
