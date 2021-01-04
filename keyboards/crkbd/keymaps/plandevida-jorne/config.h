@@ -25,7 +25,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define PRODUCT Jorne Keyboard (Based on Corne Hw2.1 Sw.Rev1, Split Common)
 // clang-format on
 
-#define EE_HANDS
+// Use the handedness defines to be able to determine which animations
+// arrays use depending of the half (animations are mirrored) to save space
+#define MASTER_LEFT
+// #define MASTER_RIGHT
+// #define EE_HANDS
 
 #define USE_IC2
 #define USE_SERIAL_PD2
@@ -37,7 +41,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #endif
 #define OLED_FONT_H "keyboards/crkbd/keymaps/plandevida-jorne/glcdfont.c"
 
-#define TAPPING_TERM 230
+#undef DEBOUNCE
+#define DEBOUNCE 3
+#define TAPPING_TERM 220
 
 #ifdef MOUSEKEY_ENABLE
 #    define MOUSEKEY_INTERVAL 16

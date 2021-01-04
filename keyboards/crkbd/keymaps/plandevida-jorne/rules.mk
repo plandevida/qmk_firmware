@@ -27,9 +27,15 @@ VARIABLE_TRACE = no             # Enable traces on variables
 API_SYSEX_ENABLE = no           # Enable send string by SYSEX api
 KEY_LOCK_ENABLE = no            # Enable key lock
 
+# Custom transport allows to send layer status to the slave half
+SPLIT_TRANSPORT = custom
+
 BOOTLOADER = caterina
 
 # If you want to change the display of OLED, you need to change here
 SRC +=  ./keymaps/plandevida-jorne/keylogger.c \
         ./keymaps/plandevida-jorne/layer_state_reader.c \
-        ./keymaps/plandevida-jorne/logo_reader.c \
+        ./keymaps/plandevida-jorne/logo_reader.c
+
+QUANTUM_LIB_SRC += ./keymaps/plandevida-jorne/transport.c \
+				   ./drivers/avr/serial.c
