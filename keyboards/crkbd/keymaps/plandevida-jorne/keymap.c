@@ -347,7 +347,7 @@ void render_anim_prep(void) {
 }
 
 void render_anim_tap(void) {
-    // clang-format off
+// clang-format off
     #ifdef MASTER_LEFT
     // Typing animation for the left half
     static const char PROGMEM tap[TAP_FRAMES][ANIM_SIZE] = {
