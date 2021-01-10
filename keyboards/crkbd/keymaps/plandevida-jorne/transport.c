@@ -126,7 +126,9 @@ void transport_slave(matrix_row_t matrix[]) {
 #    ifdef WPM_ENABLE
     set_current_wpm(i2c_buffer->current_wpm);
 #    endif
-    layer_state_set(i2c_buffer->current_layer);
+    if (layer_state != i2c_buffer->current_layer) {
+        layer_state_set(i2c_buffer->current_layer);
+    }
 }
 
 void transport_master_init(void) { i2c_init(); }
@@ -282,7 +284,9 @@ void transport_slave(matrix_row_t matrix[]) {
 #    ifdef WPM_ENABLE
     set_current_wpm(serial_m2s_buffer.current_wpm);
 #    endif
-    layer_state_set(serial_m2s_buffer.current_layer);
+    if (layer_state != serial_m2s_buffer.current_layer) {
+        layer_state_set(serial_m2s_buffer.current_layer);
+    }
 }
 
 #endif
