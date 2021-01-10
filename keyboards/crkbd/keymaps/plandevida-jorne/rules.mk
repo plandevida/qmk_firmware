@@ -4,10 +4,9 @@
 #   the appropriate keymap folder that will get included automatically
 #
 OLED_DRIVER_ENABLE = yes        # Enable the display driver
-
-MOUSEKEY_ENABLE = no           # Mouse keys(+4700)
-RGBLIGHT_ENABLE = no           # Enable WS2812 RGB underlight.
-SWAP_HANDS_ENABLE = no         # Enable one-hand typing
+MOUSEKEY_ENABLE = yes          # Mouse keys(+1700 B)
+RGBLIGHT_ENABLE = yes          # Enable WS2812 RGB underlight.
+SWAP_HANDS_ENABLE = no        # Enable one-hand typing
 NKRO_ENABLE = no               # Enable send more than 6 keys at once
 
 ## Disabled build options
@@ -27,15 +26,9 @@ VARIABLE_TRACE = no             # Enable traces on variables
 API_SYSEX_ENABLE = no           # Enable send string by SYSEX api
 KEY_LOCK_ENABLE = no            # Enable key lock
 
-# Custom transport allows to send layer status to the slave half
-SPLIT_TRANSPORT = custom
-
 BOOTLOADER = caterina
 
 # If you want to change the display of OLED, you need to change here
-SRC +=  ./keymaps/plandevida-jorne/keylogger.c \
-        ./keymaps/plandevida-jorne/layer_state_reader.c \
-        # ./keymaps/plandevida-jorne/logo_reader.c
-
-QUANTUM_LIB_SRC += ./keymaps/plandevida-jorne/transport.c \
-				   ./drivers/avr/serial.c
+SRC +=  ./keymaps/plandevida-jorne/layer_state_reader.c \
+        ./keymaps/plandevida-jorne/logo_reader.c \
+		# ./keymaps/plandevida-jorne/keylogger.c \

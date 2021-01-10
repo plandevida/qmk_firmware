@@ -25,11 +25,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define PRODUCT Jorne Keyboard (Based on Corne Hw2.1 Sw.Rev1, Split Common)
 // clang-format on
 
-// Use the handedness defines to be able to determine which animations
-// arrays use depending of the half (animations are mirrored) to save space
-// #define MASTER_LEFT
-#define MASTER_RIGHT
-// #define EE_HANDS
+#define EE_HANDS
 
 #ifdef KEYBOARD_crkbd_rev1_common
 #    undef USE_I2C
@@ -64,8 +60,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #    define RGBLIGHT_HUE_STEP 10
 #    define RGBLIGHT_SAT_STEP 17
 #    define RGBLIGHT_VAL_STEP 17
-#endif
 
-#ifndef RGBLIGHT_SLEEP
-#    define RGBLIGHT_SLEEP
+#    ifndef RGBLIGHT_SLEEP
+#        define RGBLIGHT_SLEEP
+#    endif
 #endif
