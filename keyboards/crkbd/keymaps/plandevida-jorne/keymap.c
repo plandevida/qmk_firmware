@@ -419,7 +419,6 @@ uint32_t layer_state_set_user(uint32_t state) {
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 #ifdef OLED_DRIVER_ENABLE
     if (record->event.pressed) {
-        // set_keylog(keycode, record);
         typing       = true;
         typing_timer = timer_read32();
     }
