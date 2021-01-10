@@ -5,9 +5,9 @@
 #
 OLED_DRIVER_ENABLE = yes        # Enable the display driver
 
-MOUSEKEY_ENABLE = no           # Mouse keys(+4700)
-RGBLIGHT_ENABLE = no           # Enable WS2812 RGB underlight.
-SWAP_HANDS_ENABLE = no         # Enable one-hand typing
+MOUSEKEY_ENABLE = yes           # Mouse keys(+4700)
+RGBLIGHT_ENABLE = yes           # Enable WS2812 RGB underlight.
+SWAP_HANDS_ENABLE = no         # Enable one-hand typing(+630)
 NKRO_ENABLE = no               # Enable send more than 6 keys at once
 
 ## Disabled build options
@@ -33,8 +33,8 @@ SPLIT_TRANSPORT = custom
 BOOTLOADER = caterina
 
 # If you want to change the display of OLED, you need to change here
-SRC +=  ./keymaps/plandevida-jorne/keylogger.c \
-        ./keymaps/plandevida-jorne/layer_state_reader.c \
+SRC +=  ./keymaps/plandevida-jorne/layer_state_reader.c \
+		# ./keymaps/plandevida-jorne/keylogger.c \
         # ./keymaps/plandevida-jorne/logo_reader.c
 
 QUANTUM_LIB_SRC += ./keymaps/plandevida-jorne/transport.c \

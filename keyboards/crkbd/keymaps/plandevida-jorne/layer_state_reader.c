@@ -48,11 +48,11 @@ void render_logo(int layer) {
     switch (get_highest_layer(layer)) {
         case _VALORANT:
             logo_layer      = valorant_logo;
-            logo_layer_size = valorant_logo_size;
+            logo_layer_size = sizeof(valorant_logo);
             break;
         case _GAMING:
             logo_layer      = gaming_controller_logo;
-            logo_layer_size = gaming_controller_logo_size;
+            logo_layer_size = sizeof(gaming_controller_logo);
             oled_advance_char();
             break;
         default:

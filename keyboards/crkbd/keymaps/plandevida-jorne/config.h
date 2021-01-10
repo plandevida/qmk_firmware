@@ -27,8 +27,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 // Use the handedness defines to be able to determine which animations
 // arrays use depending of the half (animations are mirrored) to save space
-// #define MASTER_LEFT
-#define MASTER_RIGHT
+#define MASTER_LEFT
+// #define MASTER_RIGHT
 // #define EE_HANDS
 
 #ifdef KEYBOARD_crkbd_rev1_common
