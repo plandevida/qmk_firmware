@@ -25,7 +25,7 @@ jobs:
     - name: Install dependencies
       run: pip3 install -r requirements.txt
     - name: Set up keyboard
-      run: qmk config user.keyboard=crkbd/rev1:commmon
+      run: qmk config user.keyboard=crkbd/rev1
     - name: Set up keymap
       run: qmk config user.keymap=plandevida-jorne
     - name: Compile keymap
