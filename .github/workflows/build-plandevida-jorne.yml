@@ -33,4 +33,4 @@ jobs:
     - name: qmk config user output
       run: qmk config user
     - name: Compile keymap
-      run: qmk compile
+      run: qmk clean && qmk compile
