@@ -1,0 +1,32 @@
+name: Build firmware
+
+on:
+  push:
+    branches:
+    - master
+    - transport_layer_status
+  pull_request:
+    paths:
+    - 'lib/python/**'
+    - 'bin/qmk'
+    - 'requirements.txt'
+    - '.github/workflows/cli.yml'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    container: qmkfm/base_container
+
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        submodules: recursive
+    - name: Install dependencies
+      run: pip3 install -r requirements.txt
+    - name: Set up keyboard
+      run: qmk config user.keyboard=crkbd/rev1/commmon
+    - name: Set up keymap
+      run: qmk config user.keymap=plandevida-jorne
+    - name: Compile keymap
+      run: qmk compile
