@@ -28,6 +28,8 @@ jobs:
       run: qmk config user.keyboard=crkbd/rev1/common
     - name: Set up keymap
       run: qmk config user.keymap=plandevida-jorne
+    - name: ls
+      run: ls
     - name: qmk config user output
       run: qmk config user
     - name: Compile keymap
