@@ -30,3 +30,7 @@ jobs:
       run: qmk config user.keymap=plandevida-jorne
     - name: Compile keymap
       run: qmk clean && qmk compile
+    - name: Cmake version
+      run: cmake --version
+    - name: Python version
+      run: python --version
