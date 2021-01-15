@@ -16,7 +16,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-    container: plandevida/qmk_plandevida
+    container: plandevida/qmk_firmware
 
     steps:
     - uses: actions/checkout@v2
