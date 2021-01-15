@@ -38,7 +38,9 @@ jobs:
       run: qmk clean && qmk compile
     - name: Rename the firmware file
       run: mv crkbd_rev1_common_plandevida-jorne.hex crkbd-rev1-common-plandevida-jorne-right.hex
-    - name: Archive jorne left
+    - name: ls
+      run: ls *.hex
+    - name: Archive jorne
       uses: actions/upload-artifact@v2
       with:
         name: firmware
