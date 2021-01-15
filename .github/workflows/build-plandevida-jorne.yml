@@ -37,9 +37,7 @@ jobs:
     - name: Compile keymap right side
       run: qmk clean && qmk compile
     - name: Rename the firmware file
-      run: mv crkbd_rev1_common_plandevida-jorne.hex crkbd-rev1-common-plandevida-jorne-right.hex
-    - name: ls
-      run: ls *.hex
+      run: mv crkbd_rev1_common_plandevida-jorne.hex crkbd_rev1_common_plandevida-jorne-right.hex
     - name: Archive jorne
       uses: actions/upload-artifact@v2
       with:
@@ -47,7 +45,7 @@ jobs:
         path: crkbd_rev1_common_plandevida-jorne-*.hex
         if-no-files-found: error
     - name: Ziping files
-      run: zip firmware.zip crkbd-rev1-common-plandevida-jorne-*.hex
+      run: zip firmware.zip crkbd_rev1_common_plandevida-jorne-*.hex
     - name: Create Release
       id: create_release
       uses: actions/create-release@v1
