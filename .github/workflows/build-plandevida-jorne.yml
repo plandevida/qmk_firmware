@@ -30,12 +30,16 @@ jobs:
       run: qmk clean && qmk compile
     - name: Rename the firmware file
       run: mv crkbd_rev1_common_plandevida-jorne.hex crkbd_rev1_common_plandevida-jorne-left.hex
+    - name: ls
+      run: ls *.hex
     - name: Prepare compilation for right side 1/2
       run: sed -i "s@#define MASTER_LEFT@//#define MASTER_LEFT@gm" keyboards/crkbd/keymaps/plandevida-jorne/config.h
     - name: Prepare compilation for right side 2/2
       run: sed -i "s@//#define MASTER_RIGHT@#define MASTER_RIGHT@gm" keyboards/crkbd/keymaps/plandevida-jorne/config.h
     - name: Compile keymap right side
       run: qmk clean && qmk compile
+    - name: ls
+      run: ls *.hex
     - name: Rename the firmware file
       run: mv crkbd_rev1_common_plandevida-jorne.hex crkbd-rev1-common-plandevida-jorne-right.hex
     - name: Archive jorne left
