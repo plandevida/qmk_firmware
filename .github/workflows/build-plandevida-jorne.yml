@@ -35,6 +35,8 @@ jobs:
       with:
         name: firmware
         path: crkbd-rev1-common-plandevida-jorne-left.hex
+    - name: Check zip name
+      run: ls -l
     - name: Prepare compilation for right side 1/2
       run: sed -i "s@#define MASTER_LEFT@//#define MASTER_LEFT@gm" keyboards/crkbd/keymaps/plandevida-jorne/config.h
     - name: Prepare compilation for right side 2/2
@@ -48,6 +50,8 @@ jobs:
       with:
         name: firmware
         path: crkbd-rev1-common-plandevida-jorne-right.hex
+    - name: Check zip name
+      run: ls -l
     - name: Create Release
       id: create_release
       uses: actions/create-release@v1
