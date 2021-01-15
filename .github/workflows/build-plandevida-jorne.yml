@@ -10,7 +10,7 @@ on:
     - 'lib/python/**'
     - 'bin/qmk'
     - 'requirements.txt'
-    - '.github/workflows/cli.yml'
+    - '.github/workflows/build-plandevida-jorne.yml'
 
 jobs:
   build:
