@@ -16,21 +16,31 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-    container: qmkfm/base_container
+    container: plandevida/qmk_plandevida
 
     steps:
     - uses: actions/checkout@v2
       with:
         submodules: recursive
-    - name: Install dependencies
-      run: pip3 install -r requirements.txt
     - name: Set up keyboard
       run: qmk config user.keyboard=crkbd/rev1/common
     - name: Set up keymap
       run: qmk config user.keymap=plandevida-jorne
-    - name: Compile keymap
-      run: qmk clean && qmk compile
-    - name: Cmake version
-      run: cmake --version
-    - name: Python version
-      run: python --version
+    - name: Compile keymap left side
+      run: qmk clean && qmk compile crkbd-rev1-common-plandevida-jorne-left.hex
+    - name: Archive (Jorne Left)
+      uses: actions/upload-artifact@v2
+      with:
+        name: firmware
+        path: crkbd-rev1-common-plandevida-jorne-left.hex
+    - name: Prepare compilation for right side 1/2
+      run: sed -i 's@#define MASTER_LEFT@//#define MASTER_LEFT@gm' config.h
+    - name: Prepare compilation for right side 2/2
+      run: sed -i 's@// #define MASTER_RIGHT@#define MASTER_RIGHT@gm' config.h
+    - name: Compile keymap right side
+      run: qmk clean && qmk compile crkbd-rev1-common-plandevida-jorne-right.hex
+    - name: Archive (Jorne Left)
+      uses: actions/upload-artifact@v2
+      with:
+        name: firmware
+        path: crkbd-rev1-common-plandevida-jorne-right.hex
