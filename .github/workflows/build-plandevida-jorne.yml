@@ -38,14 +38,20 @@ jobs:
       run: qmk clean && qmk compile
     - name: Rename the firmware file
       run: mv crkbd_rev1_common_plandevida-jorne.hex crkbd-rev1-common-plandevida-jorne-right.hex
-    - name: archive_jorne
+    - name: Archive jorne left
       uses: actions/upload-artifact@v2
       with:
         name: firmware
-        path: crkbd-rev1-common-plandevida-jorne-**.hex
+        path: crkbd-rev1-common-plandevida-jorne-left.hex
+        if-no-files-found: error
+    - name: Archive jorne right
+      uses: actions/upload-artifact@v2
+      with:
+        name: firmware
+        path: crkbd-rev1-common-plandevida-jorne-right.hex
         if-no-files-found: error
     - name: Ziping files
-      run: zip firmware.zip crkbd-rev1-common-plandevida-jorne-**.hex
+      run: zip firmware.zip crkbd-rev1-common-plandevida-jorne-left.hex crkbd-rev1-common-plandevida-jorne-right.hex
     - name: Create Release
       id: create_release
       uses: actions/create-release@v1
