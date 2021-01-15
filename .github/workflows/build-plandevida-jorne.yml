@@ -16,7 +16,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-    container: plandevida/qmk_firmware
+    container: plandevida/qmk_basedevel
 
     steps:
     - uses: actions/checkout@v2
@@ -52,7 +52,7 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        tag_name: ${{ github.ref }}-${{ github.run-id }}
+        tag_name: ${{ github.ref }}-${{ github.run_id }}
         release_name: Release ${{ github.ref }}
         draft: false
         prerelease: false
