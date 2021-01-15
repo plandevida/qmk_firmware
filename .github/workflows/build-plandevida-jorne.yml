@@ -42,10 +42,10 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: firmware
-        path: crkbd-rev1-common-plandevida-jorne-*.hex
+        path: crkbd-rev1-common-plandevida-jorne-**.hex
         if-no-files-found: error
     - name: Ziping files
-      run: zip firmware.zip crkbd-rev1-common-plandevida-jorne-*.hex
+      run: zip firmware.zip crkbd-rev1-common-plandevida-jorne-**.hex
     - name: Create Release
       id: create_release
       uses: actions/create-release@v1
