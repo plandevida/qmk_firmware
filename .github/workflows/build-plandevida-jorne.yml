@@ -30,13 +30,6 @@ jobs:
       run: qmk clean && qmk compile
     - name: Rename the firmware file
       run: mv crkbd_rev1_common_plandevida-jorne.hex crkbd_rev1_common_plandevida-jorne-left.hex
-    - name: Archive (Jorne Left)
-      uses: actions/upload-artifact@v2
-      with:
-        name: firmware
-        path: crkbd-rev1-common-plandevida-jorne-left.hex
-    - name: Check zip name
-      run: ls -l
     - name: Prepare compilation for right side 1/2
       run: sed -i "s@#define MASTER_LEFT@//#define MASTER_LEFT@gm" keyboards/crkbd/keymaps/plandevida-jorne/config.h
     - name: Prepare compilation for right side 2/2
@@ -45,13 +38,14 @@ jobs:
       run: qmk clean && qmk compile
     - name: Rename the firmware file
       run: mv crkbd_rev1_common_plandevida-jorne.hex crkbd-rev1-common-plandevida-jorne-right.hex
-    - name: Archive (Jorne Right)
+    - name: archive_jorne
       uses: actions/upload-artifact@v2
       with:
         name: firmware
-        path: crkbd-rev1-common-plandevida-jorne-right.hex
-    - name: Check zip name
-      run: ls -l
+        path: crkbd-rev1-common-plandevida-jorne-*.hex
+        if-no-files-found: error
+    - name: Ziping files
+      run: zip firmware.zip crkbd-rev1-common-plandevida-jorne-*.hex
     - name: Create Release
       id: create_release
       uses: actions/create-release@v1
