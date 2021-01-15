@@ -27,7 +27,9 @@ jobs:
     - name: Set up keymap
       run: qmk config user.keymap=plandevida-jorne
     - name: Compile keymap left side
-      run: qmk clean && qmk compile crkbd-rev1-common-plandevida-jorne-left.hex
+      run: qmk clean && qmk compile
+    - name: Rename the firmware file
+      run: mv crkbd-rev1-common_plandevida-jorne.hex crkbd-rev1-common-plandevida-jorne-left.hex
     - name: Archive (Jorne Left)
       uses: actions/upload-artifact@v2
       with:
@@ -38,7 +40,9 @@ jobs:
     - name: Prepare compilation for right side 2/2
       run: sed -i 's@// #define MASTER_RIGHT@#define MASTER_RIGHT@gm' config.h
     - name: Compile keymap right side
-      run: qmk clean && qmk compile crkbd-rev1-common-plandevida-jorne-right.hex
+      run: qmk clean && qmk compile
+    - name: Rename the firmware file
+      run: mv crkbd-rev1-common_plandevida-jorne.hex crkbd-rev1-common-plandevida-jorne-right.hex
     - name: Archive (Jorne Left)
       uses: actions/upload-artifact@v2
       with:
