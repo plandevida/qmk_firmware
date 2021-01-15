@@ -38,7 +38,7 @@ jobs:
     - name: Prepare compilation for right side 1/2
       run: sed -i 's@#define MASTER_LEFT@//#define MASTER_LEFT@gm' keyboards/crkbd/keymaps/plandevida-jorne/config.h
     - name: Prepare compilation for right side 2/2
-      run: sed -i 's@// #define MASTER_RIGHT@#define MASTER_RIGHT@gm' keyboards/crkbd/keymaps/plandevida-jorne/config.h
+      run: sed -i 's@\/\/ #define MASTER_RIGHT@#define MASTER_RIGHT@gm' keyboards/crkbd/keymaps/plandevida-jorne/config.h
     - name: Compile keymap right side
       run: qmk clean && qmk compile
     - name: Rename the firmware file
