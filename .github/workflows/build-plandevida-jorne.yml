@@ -5,14 +5,10 @@ on:
     branches:
     - transport_layer_status
   pull_request:
-    paths:
-    - 'lib/python/**'
-    - 'bin/qmk'
-    - 'requirements.txt'
-    - '.github/workflows/build-plandevida-jorne.yml'
-    - '!docker/**'
-    - '!Dockerfile'
-    - '!.github/workflows/build-publish-qmk_basedevel-docker-image.yml'
+    paths-ignore:
+    - 'docker/**'
+    - 'Dockerfile'
+    - '.github/workflows/build-publish-qmk_basedevel-docker-image.yml'
 
 jobs:
   build:
