@@ -44,8 +44,10 @@ jobs:
         name: firmware
         path: crkbd_rev1_common_plandevida-jorne-*.hex
         if-no-files-found: error
-    - name: Ziping files
+    - name: Ziping firmware files
       run: zip firmware.zip crkbd_rev1_common_plandevida-jorne-*.hex
+    - name: Ziping keymap files
+      run: cd keyboards/crkbd/keymaps && zip -r keymap.zip plandevida-jorne && cd -
     - name: Create Release
       id: create_release
       uses: actions/create-release@v1
@@ -56,13 +58,23 @@ jobs:
         release_name: Release ${{ github.ref }}-${{ github.run_id }}
         draft: false
         prerelease: false
-    - name: Upload Release Asset
-      id: upload-release-asset 
+    - name: Upload Release firmware
+      id: upload-release-firmware
       uses: actions/upload-release-asset@v1
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         upload_url: ${{ steps.create_release.outputs.upload_url }} # This pulls from the CREATE RELEASE step above, referencing it's ID to get its outputs object, which include a `upload_url`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps 
         asset_path: ./firmware.zip
-        asset_name: plandevida-jorne.zip
+        asset_name: plandevida-jorne-firmware.zip
+        asset_content_type: application/zip
+    - name: Upload Release keymap
+      id: upload-release-keymap
+      uses: actions/upload-release-asset@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        upload_url: ${{ steps.create_release.outputs.upload_url }} # This pulls from the CREATE RELEASE step above, referencing it's ID to get its outputs object, which include a `upload_url`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps 
+        asset_path: ./keymap.zip
+        asset_name: plandevida-jorne-keymap.zip
         asset_content_type: application/zip
