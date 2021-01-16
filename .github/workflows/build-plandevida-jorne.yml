@@ -10,10 +10,9 @@ on:
     - 'bin/qmk'
     - 'requirements.txt'
     - '.github/workflows/build-plandevida-jorne.yml'
-    paths-ignore:
-    - 'docker/**'
-    - 'Dockerfile'
-    - '.github/workflows/build-publish-qmk_basedevel-docker-image.yml'
+    - '!docker/**'
+    - '!Dockerfile'
+    - '!.github/workflows/build-publish-qmk_basedevel-docker-image.yml'
 
 jobs:
   build:
