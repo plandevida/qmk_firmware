@@ -36,7 +36,7 @@ WORKDIR /qmk_firmware
 RUN qmk config user.keyboard=crkbd/rev1/common && \
     qmk config user.keymap=plandevida-jorne && \
     cp util/udev/50-qmk.rules /etc/udev/rules.d/ && \
-    pacman -U avr-gcc-8.3.0-1-x86_64.pkg.tar.xz --noconfirm && \
+    pacman -U https://archive.archlinux.org/packages/a/avr-gcc/avr-gcc-8.3.0-1-x86_64.pkg.tar.xz --noconfirm && \
     pacman -Sc --noconfirm
 
 #CMD qmk clean && qmk compile
