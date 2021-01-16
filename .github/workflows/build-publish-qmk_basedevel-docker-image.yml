@@ -6,6 +6,9 @@ on:
     - transport_layer_status
     paths:
     - 'docker/**'
+    - 'lib/python/**'
+    - 'util/udev/**'
+    - 'requirements.txt'
     
 jobs:
   build:
