@@ -1,6 +1,6 @@
 ![Build firmware](https://github.com/plandevida/qmk_firmware/workflows/Build%20firmware/badge.svg?branch=transport_layer_status)
 
-# Jorne keymap for Quantum Mechanical Keyboard Firmware
+# Jorne keyboard keymap for Quantum Mechanical Keyboard Firmware
 
 [Jorne keyboard](https://github.com/joric/jorne/wiki)
 
@@ -8,8 +8,8 @@
 
 ## This repository is a fork of QMK official repository
 
-[github](https://github.com/qmk/qmk_firmware)
+[QMK github](https://github.com/qmk/qmk_firmware)
 
-## Official Website
+## Official QMK Website
 
 [qmk.fm](https://qmk.fm) is the official website of QMK, where you can find links to this page, the documentation, and the keyboards supported by QMK.
