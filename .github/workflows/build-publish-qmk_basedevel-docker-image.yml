@@ -15,6 +15,8 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
+      - uses: actions/checkout@v2
+      
       - name: Update context files
         run: cp lib/python/* docker/lib/python/ && cp util/udev/* docker/util/udev/ && cp requirements.txt docker/
           
