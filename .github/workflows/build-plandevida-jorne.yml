@@ -3,7 +3,6 @@ name: Build firmware
 on:
   push:
     branches:
-    - master
     - transport_layer_status
   pull_request:
     paths:
