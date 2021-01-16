@@ -39,4 +39,4 @@ RUN qmk config user.keyboard=crkbd/rev1/common && \
     pacman -U avr-gcc-8.3.0-1-x86_64.pkg.tar.xz --noconfirm && \
     pacman -Sc --noconfirm
 
-CMD qmk clean && qmk compile
+#CMD qmk clean && qmk compile
