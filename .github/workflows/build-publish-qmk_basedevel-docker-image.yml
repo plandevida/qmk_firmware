@@ -23,7 +23,7 @@ jobs:
       
       # Update the docker files needed for build the image.
       - name: Update context files
-        run: cp lib/python/* docker/lib/python/ && cp util/udev/* docker/util/udev/ && cp requirements.txt docker/
+        run: cp -r lib/python/* docker/lib/python/ && cp -r util/udev/* docker/util/udev/ && cp requirements.txt docker/
           
       - name: cd docker
         run: cd docker
