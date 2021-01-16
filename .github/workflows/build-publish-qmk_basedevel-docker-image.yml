@@ -9,6 +9,7 @@ on:
     - 'lib/python/**'
     - 'util/udev/**'
     - 'requirements.txt'
+    - '.github/workflows/build-publish-qmk_basedevel-container-image.yml'
     
 jobs:
   build:
