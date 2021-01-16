@@ -1,4 +1,4 @@
-name: Build firmware
+name: Build docker image
 
 on:
   push:
