@@ -18,6 +18,9 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       
+      - name: Install python dependencies
+        run: ls -s
+      
       # Update the docker files needed for build the image.
       - name: Update context files
         run: cp lib/python/* docker/lib/python/ && cp util/udev/* docker/util/udev/ && cp requirements.txt docker/
