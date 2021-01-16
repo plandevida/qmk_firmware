@@ -31,7 +31,7 @@ ENV QMK_HOME /qmk_firmware
 
 VOLUME /qmk_firmware
 WORKDIR /qmk_firmware
-#COPY . .
+COPY . .
 
 RUN qmk config user.keyboard=crkbd/rev1/common && \
     qmk config user.keymap=plandevida-jorne && \
