@@ -1,5 +1,11 @@
 ![Build firmware](https://github.com/plandevida/qmk_firmware/workflows/Build%20firmware/badge.svg?branch=transport_layer_status)
 
+# Fimware releases
+The firmware [releases](https://github.com/plandevida/qmk_firmware/releases) include:
+* The full source code of the QMK repository (including the keymap).
+* The firmware compiled for each half.
+* The keymap files ready to copy in your own repository.
+
 # Jorne keyboard keymap for Quantum Mechanical Keyboard Firmware
 
 [Jorne keyboard](https://github.com/joric/jorne/wiki)
