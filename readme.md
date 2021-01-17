@@ -88,3 +88,4 @@ The firmware [releases](https://github.com/plandevida/qmk_firmware/releases) inc
 # Credits
 ## Transport code patches
 * [Nathan Rozendaal](https://github.com/Nathan-Rozendaal), many thanks for the first implementation sending the layer status info between the halves.
+* [Cem Aksoylar](https://github.com/caksoylar), many thanks for fix the lag introducced in the transport code.
