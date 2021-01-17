@@ -82,7 +82,7 @@ enum custom_keycodes {
 #define _______ KC_NO
 #define KC______ KC_TRNS
 
-#define MT_LALT_BSCP MT(MOD_LALT, KC_BSCP)
+#define MT_LALT_BSCP MT(MOD_LALT, KC_BSPC)
 #define LT_NUM_SCP LT(_NUMBERS, KC_SPC)
 #define MT_RS_BSLS MT(MOD_RSFT, KC_BSLS)
 #define LT_MSE_DEL LT(_MOUSE, KC_DEL)
