@@ -84,3 +84,7 @@ The firmware [releases](https://github.com/plandevida/qmk_firmware/releases) inc
 ## Official QMK Website
 
 [qmk.fm](https://qmk.fm) is the official website of QMK, where you can find links to this page, the documentation, and the keyboards supported by QMK.
+
+# Credits
+## Transport code patches
+* [Nathan Rozendaal](https://github.com/Nathan-Rozendaal), many thanks for the first implementation sending the layer status info between the halves.
