@@ -121,32 +121,32 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_RGUI, KC_TAB,  KC_Q, KC_W, KC_E, KC_R, KC_T, 	          KC_Y, KC_U, KC_I,    KC_O,   KC_P,    KC_LBRC,       KC_RBRC, \
              KC_LCTL, KC_A, KC_S, KC_D, KC_F, KC_G, 		      KC_H, KC_J, KC_K,    KC_L,   KC_SCLN, KC_QUOT, \
              KC_LSFT, KC_Z, KC_X, KC_C, KC_V, KC_B, 		      KC_N, KC_M, KC_COMM, KC_DOT, KC_SLSH, MT_RS_BSLS, \
-                           LT_MSE_DEL, LT_NUM_SCP, KC_ENT,    KC_ENT, LT_NUM_SCP, MT_LALT_BSCP \
+                          LT_MSE_DEL, LT_NUM_SCP, KC_ENT,    KC_ENT, LT_NUM_SCP, MT_LALT_BSCP \
     ),
 
 	[_HOMEMOD] = LAYOUT(\
-	KC_RGUI, KC_TAB,  KC_Q, KC_W, KC_E, KC_R, KC_T, 	           KC_Y, KC_U, KC_I, KC_O, KC_P, KC_LBRC,                KC_RBRC, \
-		     KC_LCTL, MT_SU_A, MT_RA_S, MT_LS_D, MT_LC_F, KC_G,    KC_H, MT_RC_J, MT_RS_K, MT_RA_L, MT_SU_SC, KC_QUOT, \
-		     KC_LSFT, KC_Z, KC_X, KC_C, KC_V, KC_B, 		       KC_N, KC_M, KC_COMM, KC_DOT, KC_SLSH, KC_BSLS, \
-							   KC_BSPC, LT_NUM_SCP, KC_ENT,   KC_ENT, LT_NUM_SCP, TG(_MOUSE) \
+	KC_RGUI, KC_TAB,       KC_Q, KC_W, KC_E, KC_R, KC_T, 	                KC_Y, KC_U, KC_I, KC_O, KC_P, KC_LBRC,                KC_RBRC, \
+		     MO(_MOUSE),   MT_SU_A, MT_RA_S, MT_LS_D, MT_LC_F, KC_G,        KC_H, MT_RC_J, MT_RS_K, MT_RA_L, MT_SU_SC, KC_QUOT, \
+		     MO(_NUMBERS), KC_Z, KC_X, KC_C, KC_V, KC_B, 		            KC_N, KC_M, KC_COMM, KC_DOT, KC_SLSH, KC_BSLS, \
+							            KC_DEL, KC_SCP, KC_ENT,       KC_ENT, KC_SCP, KC_BSCP \
     ),
 
 	[_HOMEMODMAC] = LAYOUT(\
-	KC_RGUI, KC_TAB,  KC_Q, KC_W, KC_E, KC_R, KC_T, 	            KC_Y, KC_U, KC_I, KC_O, KC_P, KC_LBRC,                KC_RBRC, \
-		     KC_LCTL, MT_LC_A, MT_RA_S, MT_SU_D, MT_LS_F, KC_G, 	KC_H, MT_RS_J, MT_SU_K, MT_RA_L, MT_RC_SC, KC_QUOT, \
-		     KC_LSFT, KC_Z, KC_X, KC_C, KC_V, KC_B, 		        KC_N, KC_M, KC_COMM, KC_DOT, KC_SLSH, KC_BSLS, \
-					           KC_BSPC, LT_NUM_SCP, KC_ENT,   KC_ENT, LT_NUM_SCP, TG(_MOUSE) \
+	KC_RGUI, KC_TAB,       KC_Q, KC_W, KC_E, KC_R, KC_T, 	                KC_Y, KC_U, KC_I, KC_O, KC_P, KC_LBRC,                KC_RBRC, \
+		     MO(_MOUSE),   MT_LC_A, MT_RA_S, MT_SU_D, MT_LS_F, KC_G, 	    KC_H, MT_RS_J, MT_SU_K, MT_RA_L, MT_RC_SC, KC_QUOT, \
+		     MO(_NUMBERS), KC_Z, KC_X, KC_C, KC_V, KC_B, 		            KC_N, KC_M, KC_COMM, KC_DOT, KC_SLSH, KC_BSLS, \
+					                    KC_DEL, KC_SCP, KC_ENT,       KC_ENT, KC_SCP, KC_BSCP \
     ),
 
 	[_VALORANT] = LAYOUT(\
-	MO(_NUMBERS), KC_TAB,  KC_Q, KC_W, KC_E, KC_R, KC_T, 	  KC_Y, KC_U, KC_I, KC_O, KC_P, KC_LBRC,               KC_RBRC, \
-		          KC_LSFT, KC_A, KC_S, KC_D, KC_F, KC_G, 	  KC_H, KC_J, KC_K, KC_L, KC_SCLN, KC_QUOT, \
-		          KC_LCTL, KC_Z, KC_X, KC_C, KC_V, KC_B, 	  KC_N, KC_M, KC_COMM, KC_DOT, KC_SLSH, MT_RS_BSLS, \
-							          KC_M, KC_SPC, KC_4,   KC_ENT, KC_SPC, TG(_MOUSE) \
+	MO(_NUMBERS), KC_TAB,  KC_Q, KC_W, KC_E, KC_R, KC_T, 	     KC_Y, KC_U, KC_I, KC_O, KC_P, KC_LBRC,              KC_RBRC, \
+		          KC_LSFT, KC_A, KC_S, KC_D, KC_F, KC_G, 	     KC_H, KC_J, KC_K, KC_L, KC_SCLN, KC_QUOT, \
+		          KC_LCTL, KC_Z, KC_X, KC_C, KC_V, KC_B, 	     KC_N, KC_M, KC_COMM, KC_DOT, KC_SLSH, MT_RS_BSLS, \
+							            KC_M, KC_SPC, KC_4,   KC_ENT, KC_SPC, TG(_MOUSE) \
     ),
 
 	[_GAMING] = LAYOUT(\
-	MO(_NUMBERS), KC_TAB,  KC_Q, KC_W, KC_E, KC_R, KC_T, 	       KC_Y, KC_U, KC_I, KC_O, KC_P, KC_LBRC,                KC_RGUI, \
+	MO(_NUMBERS), KC_TAB,  KC_Q, KC_W, KC_E, KC_R, KC_T, 	       KC_Y, KC_U, KC_I, KC_O, KC_P, KC_LBRC,              KC_RGUI, \
                   KC_LSFT, KC_A, KC_S, KC_D, KC_F, KC_G, 	       KC_H, KC_J, KC_K, KC_L, KC_SCLN, KC_QUOT, \
                   KC_LCTL, KC_Z, KC_X, KC_C, KC_V, KC_B, 		   KC_N, KC_M, KC_COMM, KC_DOT, KC_SLSH, MT_RS_BSLS, \
 							       KC_BSPC, KC_SPC, KC_ENT,     KC_ENT, KC_SPC, TG(_MOUSE) \
@@ -160,16 +160,16 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
 
     [_MOUSE] = LAYOUT(\
-    KC______, KC_F1, KC_F2, KC_F3, KC_F4, KC_F5, KC_F6, 			     _______, _______, KC_MS_U, _______, _______, _______,   KC_ESC, \
+    KC______, KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6, 		 _______, _______, KC_MS_U, _______, _______, _______,   KC_ESC, \
               _______, _______, _______, KC_WH_U, KC_WH_D, KC_ACL2, 	 _______, KC_MS_L, KC_MS_D, KC_MS_R, _______, _______, \
               _______, _______, _______, KC_WH_L, KC_WH_R, KC_ACL0, 	 _______, _______, _______, _______, _______, KC_CAPS, \
                                           _______, KC______, KC_ACL1, 	KC_BTN2, KC_BTN1, KC______ \
     ),
 
     [_CONFIG] = LAYOUT(\
-    KC______, HOMEMODMAC, HOMEMOD, _______, KC_MPRV, KC_MNXT, _______,    _______, _______, _______, _______, BL_TOGG, RGB_TOG,   KC______, \
-		      GAMING,    VALORANT, _______, KC_MSTP, KC_MPLY, KC_VOLU, 	  _______, RGB_HUI, RGB_SAI, RGB_VAI, RGB_SPI, RGB_MOD, \
-		      QWERTY,     _______, _______, _______, _______, KC_VOLD,    _______, RGB_HUD, RGB_SAD, RGB_VAD, RGB_SPD, RGB_RMOD, \
+    KC______, HOMEMODMAC, HOMEMOD, _______, _______, _______, _______,    _______, _______, _______, _______, _______, RGB_TOG,   KC______, \
+		      GAMING,    VALORANT, _______, KC_MPRV, KC_MNXT, KC_VOLU, 	  _______, RGB_HUI, RGB_SAI, RGB_VAI, RGB_SPI, RGB_MOD, \
+		      QWERTY,     _______, _______, KC_MSTP, KC_MPLY, KC_VOLD,    _______, RGB_HUD, RGB_SAD, RGB_VAD, RGB_SPD, RGB_RMOD, \
 									           _______, KC______, SH_TG, SH_TG, _______, KC______ \
     ),
 };
