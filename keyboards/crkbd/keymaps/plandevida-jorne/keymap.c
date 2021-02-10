@@ -82,7 +82,7 @@ enum custom_keycodes {
 #define _______ KC_NO
 #define KC______ KC_TRNS
 
-#define MT_LALT_BSCP MT(MOD_LALT, KC_BSPC)
+#define MT_LALT_BSPC MT(MOD_LALT, KC_BSPC)
 #define LT_NUM_SPC LT(_NUMBERS, KC_SPC)
 #define MT_RS_BSLS MT(MOD_RSFT, KC_BSLS)
 #define LT_MSE_DEL LT(_MOUSE, KC_DEL)
@@ -121,21 +121,21 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_RGUI, KC_TAB,  KC_Q, KC_W, KC_E, KC_R, KC_T, 	          KC_Y, KC_U, KC_I,    KC_O,   KC_P,    KC_LBRC,       KC_RBRC, \
              KC_LCTL, KC_A, KC_S, KC_D, KC_F, KC_G, 		      KC_H, KC_J, KC_K,    KC_L,   KC_SCLN, KC_QUOT, \
              KC_LSFT, KC_Z, KC_X, KC_C, KC_V, KC_B, 		      KC_N, KC_M, KC_COMM, KC_DOT, KC_SLSH, MT_RS_BSLS, \
-                          LT_MSE_DEL, LT_NUM_SPC, KC_ENT,    KC_ENT, LT_NUM_SPC, MT_LALT_BSCP \
+                          LT_MSE_DEL, LT_NUM_SPC, KC_ENT,    KC_ENT, LT_NUM_SPC, MT_LALT_BSPC \
     ),
 
 	[_HOMEMOD] = LAYOUT(\
 	KC_RGUI, KC_TAB,  KC_Q, KC_W, KC_E, KC_R, KC_T, 	                  KC_Y, KC_U, KC_I, KC_O, KC_P, KC_LBRC,                KC_RBRC, \
 		     KC_RALT, MT_SU_A, MT_RA_S, MT_LS_D, MT_LC_F, KC_G,           KC_H, MT_RC_J, MT_RS_K, MT_RA_L, MT_SU_SC, KC_QUOT, \
 		     KC_LALT, KC_Z, KC_X, KC_C, KC_V, KC_B, 		              KC_N, KC_M, KC_COMM, KC_DOT, KC_SLSH, KC_BSLS, \
-							      LT_MSE_DEL, LT_NUM_SPC, KC_ENT,   KC_ENT, LT_NUM_SPC, KC_BSCP \
+							      LT_MSE_DEL, LT_NUM_SPC, KC_ENT,   KC_ENT, LT_NUM_SPC, KC_BSPC \
     ),
 
 	[_HOMEMODMAC] = LAYOUT(\
 	KC_RGUI, KC_TAB,  KC_Q, KC_W, KC_E, KC_R, KC_T, 	                KC_Y, KC_U, KC_I, KC_O, KC_P, KC_LBRC,                KC_RBRC, \
 		     KC_RALT, MT_LC_A, MT_RA_S, MT_SU_D, MT_LS_F, KC_G, 	    KC_H, MT_RS_J, MT_SU_K, MT_RA_L, MT_RC_SC, KC_QUOT, \
 		     KC_LALT, KC_Z, KC_X, KC_C, KC_V, KC_B, 		            KC_N, KC_M, KC_COMM, KC_DOT, KC_SLSH, KC_BSLS, \
-					              LT_MSE_DEL, LT_NUM_SPC, KC_ENT,   KC_ENT, LT_NUM_SPC, KC_BSCP \
+					              LT_MSE_DEL, LT_NUM_SPC, KC_ENT,   KC_ENT, LT_NUM_SPC, KC_BSPC \
     ),
 
 	[_VALORANT] = LAYOUT(\
