@@ -47,6 +47,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #undef DEBOUNCE
 #define DEBOUNCE 3
 #define TAPPING_TERM 250
+#define PERMISSIVE_HOLD
 
 #ifdef MOUSEKEY_ENABLE
 #    define MOUSEKEY_INTERVAL 16
