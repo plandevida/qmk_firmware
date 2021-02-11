@@ -6,7 +6,7 @@
 OLED_DRIVER_ENABLE = yes        # Enable the display driver
 
 MOUSEKEY_ENABLE = yes            # Mouse keys(+4700)
-RGBLIGHT_ENABLE = yes           # Enable WS2812 RGB underlight.
+RGBLIGHT_ENABLE = no           # Enable WS2812 RGB underlight.
 SWAP_HANDS_ENABLE = no         # Enable one-hand typing(+630)
 NKRO_ENABLE = no               # Enable send more than 6 keys at once
 
