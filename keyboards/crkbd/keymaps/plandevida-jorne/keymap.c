@@ -87,8 +87,8 @@ enum custom_keycodes {
 #define MT_RS_BSLS MT(MOD_RSFT, KC_BSLS)
 #define LT_MSE_DEL LT(_MOUSE, KC_DEL)
 
-#define MT_RALT_LBRC MT(MOD_RALT, KC_LBRC)
-#define MT_RALT_RBRC MT(MOD_RALT, KC_RBRC)
+#define MT_RALT_LBRC MT(RALT(KC_LBRC), KC_LBRC)
+#define MT_RALT_RBRC MT(RALT(KC_RBRC), KC_RBRC)
 
 // Homemod row defines
 // Windows/Linux
