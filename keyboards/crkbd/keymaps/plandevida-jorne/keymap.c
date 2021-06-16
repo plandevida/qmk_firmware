@@ -87,6 +87,9 @@ enum custom_keycodes {
 #define MT_RS_BSLS MT(MOD_RSFT, KC_BSLS)
 #define LT_MSE_DEL LT(_MOUSE, KC_DEL)
 
+#define MT_RALT_LBRC MT(MOD_RALT, KC_LBRC)
+#define MT_RALT_RBRC MT(MOD_RALT, KC_RBRC)
+
 // Homemod row defines
 // Windows/Linux
 // |_left hand
@@ -118,7 +121,7 @@ enum custom_keycodes {
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [_QWERTY] = LAYOUT(\
-    KC_RGUI, KC_TAB,  KC_Q, KC_W, KC_E, KC_R, KC_T, 	          KC_Y, KC_U, KC_I,    KC_O,   KC_P,    ALGR(KC_LBRC),       ALGR(KC_RBRC), \
+    KC_RGUI, KC_TAB,  KC_Q, KC_W, KC_E, KC_R, KC_T, 	          KC_Y, KC_U, KC_I,    KC_O,   KC_P,    MT_RALT_LBRC,       MT_RALT_RBRC, \
              KC_LCTL, KC_A, KC_S, KC_D, KC_F, KC_G, 		      KC_H, KC_J, KC_K,    KC_L,   KC_SCLN, KC_QUOT, \
              KC_LSFT, KC_Z, KC_X, KC_C, KC_V, KC_B, 		      KC_N, KC_M, KC_COMM, KC_DOT, KC_SLSH, MT_RS_BSLS, \
                           LT_MSE_DEL, LT_NUM_SPC, KC_ENT,    KC_ENT, LT_NUM_SPC, MT_LALT_BSPC \
