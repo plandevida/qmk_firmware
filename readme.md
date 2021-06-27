@@ -1,6 +1,6 @@
 ![Build firmware](https://github.com/plandevida/qmk_firmware/workflows/Build%20firmware/badge.svg?branch=transport_layer_status)
 
-# Whay this frok?
+# Why this frok?
 Obiously because I want to personalize the keymap ;)
 
 On the other hand, It includes a couple interesting things, keep reading.
